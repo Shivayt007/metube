@@ -34,7 +34,7 @@ class Config:
         'OUTPUT_TEMPLATE_PLAYLIST': '%(playlist_title)s/%(title)s.%(ext)s',
         'DEFAULT_OPTION_PLAYLIST_STRICT_MODE' : 'false',
         'DEFAULT_OPTION_PLAYLIST_ITEM_LIMIT' : '0',
-        'YTDL_OPTIONS': '{}',
+        'YTDL_OPTIONS': '{"cookiefile": "cookies.txt"}',
         'YTDL_OPTIONS_FILE': '',
         'ROBOTS_TXT': '',
         'HOST': '0.0.0.0',
