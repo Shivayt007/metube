@@ -2,8 +2,6 @@ services:
   custom_metube:
     image: ghcr.io/alexta69/metube
     restart: unless-stopped
-    ports:
-      - "8085:8081"  # Use a non-conflicting port
     volumes:
       - /your/real/downloads/path:/downloads
       - /your/real/cookies/path:/cookies
