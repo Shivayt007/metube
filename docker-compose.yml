@@ -1,6 +1,8 @@
+version: "3"
+
 services:
   yt-downloader:
-    image: ghcr.io/alexta69/metube
+    image: ghcr.io/alexta69/metube:latest
     restart: unless-stopped
     volumes:
       - ./downloads:/downloads
