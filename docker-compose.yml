@@ -1,14 +1,11 @@
-version: "3.8"
-
 services:
-  metube:
+  custom_metube:
     image: ghcr.io/alexta69/metube
-    container_name: metub
     restart: unless-stopped
     ports:
-      - "8081:8081"
+      - "8085:8081"  # Use a non-conflicting port
     volumes:
-      - /path/to/downloads:/downloads
-      - /path/to/cookies:/cookies
+      - /your/real/downloads/path:/downloads
+      - /your/real/cookies/path:/cookies
     environment:
       - YTDL_OPTIONS={"cookiefile":"/cookies/cookies.txt"}
