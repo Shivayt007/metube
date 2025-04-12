@@ -1,9 +1,9 @@
 services:
-  custom_metube:
+  yt-downloader:
     image: ghcr.io/alexta69/metube
     restart: unless-stopped
     volumes:
-      - /your/real/downloads/path:/downloads
-      - /your/real/cookies/path:/cookies
+      - ./downloads:/downloads
+      - ./cookies:/cookies
     environment:
       - YTDL_OPTIONS={"cookiefile":"/cookies/cookies.txt"}
