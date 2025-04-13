@@ -1,10 +1,13 @@
 
 services:
   yt-downloader:
-    image: ghcr.io/alexta69/metube:latest
+    build: .
+    container_name: yt-downloader
     restart: unless-stopped
     volumes:
       - ./downloads:/downloads
       - ./cookies:/cookies
     environment:
       - YTDL_OPTIONS={"cookiefile":"/cookies/cookies.txt"}
+    ports:
+      - "8081:8081"  # Optional, expose if needed
