@@ -1,7 +1,7 @@
 services:
-  yt-downloader:
+  yt-dwnloader:
     build: .
-    container_name: yt-downloader
+    container_name: yt-dwnloader
     restart: unless-stopped
     volumes:
       - ./downloads:/downloads
