@@ -36,5 +36,5 @@ ENV DOWNLOAD_DIR /downloads
 ENV STATE_DIR /downloads/.metube
 ENV TEMP_DIR /downloads
 VOLUME /downloads
-EXPOSE 8081
+EXPOSE 8082
 ENTRYPOINT ["/sbin/tini", "-g", "--", "./docker-entrypoint.sh"]
