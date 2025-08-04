@@ -1,0 +1,13 @@
+services:
+  yt-dwnloader:
+    build: .
+    container_name: yt-dwnloader
+    restart: unless-stopped
+    volumes:
+      - ./downloads:/downloads
+      - ./cookies:/cookies
+    environment:
+      - YTDL_OPTIONS={"cookiefile":"/cookies/cookies.txt"}
+      - DELETE_FILE_ON_TRASHCAN=true
+    ports:
+      - "8082:8082"  # Optional, expose if needed
